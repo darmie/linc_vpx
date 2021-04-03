@@ -1,4 +1,4 @@
-# linc/empty
-An example empty project to start a linc library.
+# linc/vpx
+A libvpx linc binding for Haxe.
 
 For more information, see the [linc homepage](http://snowkit.github.io/linc/)
