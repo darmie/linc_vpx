@@ -16,7 +16,7 @@ cd ../..
 mkdir build
 cd build
 make clean
-../libvpx/configure --enable-vp8 --disable-vp9 --enable-avx2 --enable-avx512  --enable-libyuv --disable-docs --disable-examples --disable-unit-tests --extra-cxxflags="-mmacosx-version-min=10.9" --extra-cflags="-mmacosx-version-min=10.9"
+../libvpx/configure --enable-vp8 --enable-vp9 --enable-avx2 --enable-avx512  --enable-libyuv --disable-docs --disable-examples --disable-unit-tests --extra-cxxflags="-mmacosx-version-min=10.9" --extra-cflags="-mmacosx-version-min=10.9"
 
 make
 rm -rf ../macosx64

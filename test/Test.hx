@@ -29,7 +29,7 @@ class Test {
 			out = WebmReader.read_frame(cast handle);
 			trace('Reading image #${i}: ${out.width}x${out.height}');
 			#if linc_stb
-			ImageWrite.write_tga('${path.dir}/out/${path.file}_img_${i}.tga', out.width, out.height, out.comp, out.data, 0, 0);
+			ImageWrite.write_png('${path.dir}/out/${path.file}_img_${i}.png', out.width, out.height, out.comp, out.data, 0, 0, 0);
 			#end
 		}
 

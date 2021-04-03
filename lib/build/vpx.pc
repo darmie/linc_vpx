@@ -1,4 +1,4 @@
-# pkg-config file from libvpx v1.10.0-24-g8b3e575a4
+# pkg-config file from libvpx v1.10.0-25-gf2845b522
 prefix=/usr/local
 exec_prefix=${prefix}
 libdir=${prefix}/lib

@@ -12,17 +12,17 @@ ALL_TARGETS += tools
 
 PREFIX=/usr/local
 ifeq ($(MAKECMDGOALS),dist)
-DIST_DIR?=vpx-vp8-x86_64-darwin20-v1.10.0-24-g8b3e575a4
+DIST_DIR?=vpx-vp8-vp9-x86_64-darwin20-v1.10.0-25-gf2845b522
 else
 DIST_DIR?=$(DESTDIR)/usr/local
 endif
 LIBSUBDIR=lib
 
-VERSION_STRING=v1.10.0-24-g8b3e575a4
+VERSION_STRING=v1.10.0-25-gf2845b522
 
 VERSION_MAJOR=1
 VERSION_MINOR=10
 VERSION_PATCH=0
 
-CONFIGURE_ARGS=--enable-vp8 --disable-vp9 --enable-avx2 --enable-avx512 --enable-libyuv --disable-docs --disable-examples --disable-unit-tests --extra-cxxflags=-mmacosx-version-min=10.9 --extra-cflags=-mmacosx-version-min=10.9
-CONFIGURE_ARGS?=--enable-vp8 --disable-vp9 --enable-avx2 --enable-avx512 --enable-libyuv --disable-docs --disable-examples --disable-unit-tests --extra-cxxflags=-mmacosx-version-min=10.9 --extra-cflags=-mmacosx-version-min=10.9
+CONFIGURE_ARGS=--enable-vp8 --enable-vp9 --enable-avx2 --enable-avx512 --enable-libyuv --disable-docs --disable-examples --disable-unit-tests --extra-cxxflags=-mmacosx-version-min=10.9 --extra-cflags=-mmacosx-version-min=10.9
+CONFIGURE_ARGS?=--enable-vp8 --enable-vp9 --enable-avx2 --enable-avx512 --enable-libyuv --disable-docs --disable-examples --disable-unit-tests --extra-cxxflags=-mmacosx-version-min=10.9 --extra-cflags=-mmacosx-version-min=10.9
