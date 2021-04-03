@@ -1,3 +1,0 @@
-INPUT += ../libvpx/vpx/vp8.h ../libvpx/vpx/vp8cx.h ../libvpx/vpx/vp8dx.h ../libvpx/vpx/vpx_codec.h ../libvpx/vpx/vpx_decoder.h ../libvpx/vpx/vpx_encoder.h ../libvpx/vpx/vpx_ext_ratectrl.h ../libvpx/vpx/vpx_frame_buffer.h ../libvpx/vpx/vpx_image.h
-INCLUDE_PATH += .
-ENABLED_SECTIONS += decoder encoder vp8 vp8_decoder vp8_encoder vp9 vp9_decoder vp9_encoder
