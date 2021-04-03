@@ -3,14 +3,16 @@
 -cp ../
 # pick a target
 
-#-D mac
+-D mac
 #-D windows
 #-D linux
 
+-lib linc_stb
+
 # To build 32 or 64 bit
 #(if not using the default for your platform):
-
-#-D HXCPP_M64
+-D MACOSX_DEPLOYMENT_TARGET=10.9
+-D HXCPP_M64
 #-D HXCPP_M32
 
 #-cmd ./cpp/Test

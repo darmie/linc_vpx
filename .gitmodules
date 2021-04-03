@@ -1,0 +1,3 @@
+[submodule "lib/libvpx"]
+	path = lib/libvpx
+	url = https://github.com/darmie/libvpx

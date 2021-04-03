@@ -1,0 +1,100 @@
+<xml>
+
+    <!-- For a more in depth guide: https://github.com/snowkit/hxcpp-guide -->
+
+    <files id='haxe'>
+
+        <!-- add files and flags to the haxe c++ build -->
+        <compilerflag value='-I${LINC_VPX_PATH}lib/build/'/>
+        <compilerflag value='-I${LINC_VPX_PATH}lib/libvpx/'/>
+        <compilerflag value='-I${LINC_VPX_PATH}lib/libvpx/third_party/libwebm/'/>
+        <compilerflag value='-I${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/include'/>
+
+        <compilerflag value='-I${LINC_VPX_PATH}linc/'/>
+
+        <!-- <compilerflag value='-DHAS_ARGBTORGB24ROW_AVX512VBMI=0' /> -->
+
+        <file name='${LINC_VPX_PATH}lib/libvpx/md5_utils.c'/>
+        <file name='${LINC_VPX_PATH}lib/libvpx/args.c'/>
+        <file name='${LINC_VPX_PATH}lib/libvpx/ivfdec.c'/>
+        <file name='${LINC_VPX_PATH}lib/libvpx/ivfenc.c'/>
+        <file name='${LINC_VPX_PATH}lib/libvpx/y4menc.c'/>
+        <file name='${LINC_VPX_PATH}lib/libvpx/warnings.c'/>
+        <file name='${LINC_VPX_PATH}lib/libvpx/webmdec.cc'/>
+        <file name='${LINC_VPX_PATH}lib/libvpx/webmenc.cc'/>
+        <file name='${LINC_VPX_PATH}lib/libvpx/tools_common.c'/>
+        <file name='${LINC_VPX_PATH}lib/libvpx/video_reader.c'/>
+        <file name='${LINC_VPX_PATH}lib/libvpx/video_writer.c'/>
+        <!-- <file name='${LINC_VPX_PATH}lib/libvpx/vpxdec.c'/> -->
+        <!-- <file name='${LINC_VPX_PATH}lib/libvpx/vpxenc.c'/> -->
+        <file name='${LINC_VPX_PATH}lib/libvpx/vpxstats.c'/>
+        <file name='${LINC_VPX_PATH}lib/libvpx/y4minput.c'/>
+         <file name='${LINC_VPX_PATH}lib/libvpx/rate_hist.c'/>
+
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libwebm/mkvmuxer/mkvmuxer.cc"/>
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libwebm/mkvmuxer/mkvmuxerutil.cc"/>
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libwebm/mkvmuxer/mkvwriter.cc"/>
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libwebm/mkvparser/mkvparser.cc"/>
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libwebm/mkvparser/mkvreader.cc"/>
+
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/compare.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/compare_gcc.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/compare_common.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/compare_neon64.cc" if="linux" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/compare_neon.cc"  if="linux"/>
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/compare_posix.cc" if="linux" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/compare_win.cc" if="windows" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/convert_argb.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/convert.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/convert_from_argb.cc"/>
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/convert_from.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/convert_jpeg.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/convert_to_argb.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/convert_to_i420.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/cpu_id.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/mjpeg_decoder.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/mjpeg_validate.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/planar_functions.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/rotate_argb.cc"/>
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/rotate.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/rotate_any.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/rotate_common.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/rotate_gcc.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/rotate_mips.cc" if="linux" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/rotate_neon64.cc" if="linux" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/rotate_neon.cc" if="linux" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/row_any.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/row_gcc.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/row_common.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/row_mips.cc" if="linux" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/row_neon64.cc" if="linux" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/row_neon.cc" if="linux" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/row_posix.cc" if="linux"/>
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/row_win.cc" if="windows"/>
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/scale_argb.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/scale.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/scale_common.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/scale_gcc.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/scale_any.cc" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/scale_mips.cc" if="linux"/>
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/scale_neon64.cc"  if="linux"/>
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/scale_neon.cc" if="linux" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/scale_posix.cc" if="linux" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/scale_win.cc" if="windows" />
+        <file name="${LINC_VPX_PATH}lib/libvpx/third_party/libyuv/source/video_common.cc" />
+
+        <file name='${LINC_VPX_PATH}linc/linc_vpx.cpp' />
+
+    </files>
+
+    <target id="haxe">
+
+        <!-- add linker flags to the haxe build output -->
+
+        <section if="mac">
+            <lib name='${LINC_VPX_PATH}lib/macosx64/libvpx.a' />
+        </section>
+
+    </target>
+
+</xml>
